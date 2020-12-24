@@ -1,0 +1,23 @@
+{
+  "name": "torrent-client",
+  "version": "1.0.0",
+  "description": "A torrent Client application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Manish-210/Torrent-Client.git"
+  },
+  "author": "Manish Prajapati and Jay Katkani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Manish-210/Torrent-Client/issues"
+  },
+  "homepage": "https://github.com/Manish-210/Torrent-Client#readme",
+  "dependencies": {
+    "bencode": "^2.0.1"
+  }
+}
