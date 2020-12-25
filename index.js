@@ -17,9 +17,8 @@ const socket = dgram.createSocket('udp4');
 
 const myMsg = Buffer.from('hello', 'utf8');
 
-socket.send(myMsg, 0, myMsg.length, url.port, url.host, ()=> {});
+socket.send(myMsg, 0, myMsg.length, url.port, url.host, () => {});
 
 socket.on('message', msg => {
-  console.log('message is ', msg);
+    console.log('message is ', msg);
 })
-
