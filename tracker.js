@@ -1,7 +1,7 @@
 //you can't use undeclared variables
 'use strict';
 
-// Using require to access dgram,buffer,url module 
+// Using require to access dgram,buffer,url module
 const dgram = require('dgram');
 const Buffer = require('buffer').Buffer;
 const urlParse = require('url').parse;
@@ -42,25 +42,26 @@ module.exports.getPeers = (torrent, callback) => {
 //udpSend function is made such that it calls socket.send without using offset and length arguments
 function udpSend(socket, message, rawUrl, callback = () => {}) {
     const url = urlParse(rawUrl);
+    message = Buffer.from('utf8');
     socket.send(message, 0, message.length, url.port, url.host, callback);
 }
 
 function respType(resp) {
-    // ...
+
 }
 
 function buildConnReq() {
-    // ...
+
 }
 
 function parseConnResp(resp) {
-    // ...
+
 }
 
 function buildAnnounceReq(connId) {
-    // ...
+
 }
 
 function parseAnnounceResp(resp) {
-    // ...
+
 }
