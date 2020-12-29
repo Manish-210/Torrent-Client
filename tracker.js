@@ -6,8 +6,9 @@ const dgram = require('dgram');
 const Buffer = require('buffer').Buffer;
 const urlParse = require('url').parse;
 const crypto = require('crypto');
-const torrentParser = require('./torrent-parser');
+//const torrentParser = require('./torrent-parser');
 const util = require('./util');
+const torrentParser = require('parse-torrent')
 
 //this funtion executes in 4 steps and then pass it to callback
 //1. Send a connect request
@@ -15,7 +16,8 @@ const util = require('./util');
 //3. Use the connection id to send an announce request
 //4. Get the announce response and extract the peers list
 module.exports.getPeers = (torrent, callback) => {
-    const socket = dgram.createSocket('udp4'); //udp4 it uss ipv4 address
+    //To start talking to a tracker, we need to open up a UDP socket to the tracker address
+    const socket = dgram.createSocket('udp4'); //udp4 it uses ipv4 address
     const url = torrent.announce.toString('utf8'); //converts string to binary using utf8 encoder/decoder
 
     //send connect request

@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/Manish-210/Torrent-Client#readme",
   "dependencies": {
-    "bencode": "^2.0.1"
+    "bencode": "^2.0.1",
+    "bignumber.js": "^9.0.1",
+    "parse-torrent": "^9.1.0",
+    "torrent-parser": "^1.2.0"
   }
 }
